@@ -1,300 +1,280 @@
-/* CalculatePricePage.css */
+import React, { useEffect, useState } from 'react';
+import './css/Calculateprice.css'
+import { useTranslation,Trans } from 'react-i18next';
+import Db from './db'
+const Calculateprice = () => {
+ const {t,i18n} = useTranslation()
+  const [weight, setWeight] = useState(0);
+  const [price, setPrice] = useState(null);
+  const [selectedCountry, setSelectedCountry] = useState(0);
+  const [height, setHeight] = useState(0);
+  const [width, setWidth] = useState(0);
+  const [Length, setLength] = useState(0);
+  const handleCountryChange = (event) => {
+    setSelectedCountry(event.target.value);
 
+  };
 
-.page-container {
-    display: flex;
-    justify-content: center;
-    
-  }
+  const clearErrors = () => {
+    setErrors({});
+  };
 
-  .db{
-    flex: 1;
-    display: flex;
-    flex-direction:column ;
-    height: 100vh;
-background-color: #f8fafc;
-  }
-
-.calculateprice {
-  flex: 3;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    height: 100vh;
-  }
-  
-
-  .calculateprice h2 {
-    padding: 5px;
-
-  }
-
-
-  /* .input_boxes  */
-  .customize_input_boxes{
-   display: flex;
-   flex-direction: row;
-  }
-
-  /* .form-group  */
-  .my_form_group {
-    padding: 5px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-  
-
-  /* .form-group  */
-  .my_form_group label {
-    margin-bottom: 5px; 
-    position: absolute;
-    top: -5px;
-    left: 10px;
-    background-color: #fff;
-    padding: 0 5px;
-    transition: color 0.3s;
-    font-size: small;
-  
-  }
-  
-  input[type='number'],
-  select {
-    
-    width: 90%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding-top: 20px;
-    border: 1px solid #ccc;
-    transition: border-color 0.3s;
-  }
-  
-
-  /* .form-group  */
-  .my_form_group select{
-    width: auto;
+  const settonull = ()=>{
+  setPrice(null)
+  setHeight(0)
+  setLength(0)
+  setWeight(0)
+  setWidth(0)
+  setSelectedCountry('')
+  clearErrors();
   }
 
 
-  /* .form-group  */
-  .my_form_group.focused input {
-    color: red; /* Change label text color to red when focused */
-    font-weight: bold;
-  }
 
-  .large-paragraph-section{
-    margin:  5px;
+  const fetchPrice = async (countryvalue,width,height,Length,weight) => {
+    try {
+      const response = await fetch(`/api/CalculatePrice?countryId=${countryvalue}&height=${height}&length=${Length}&width=${width}&weight=${weight}`, {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          Authorization: `Bearer ${accessToken}`,
+          // You can include other headers if needed, e.g. Authorization
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok.");
+      }
+
+      const data = await response.json();
+      console.log("price:",data)
+      setPrice(data);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
+
+
+
+  const handleCalculate = () => {
+
+    validateInput();
+    // Assuming the same pricing criteria as before
+    console.log(selectedCountry)
+
+    var countryvalue=0;
+    {countryarray.map((country1, index) => {
+         if(selectedCountry === country1.name){
+                countryvalue=country1.id
+         }
+        })}
+
+console.log('value:',countryvalue)
+
+fetchPrice(countryvalue,width,height,Length,weight)
+// var totalPrice=0;
+//    const VW = (width*height*Length)/5000; 
+//    if (weight > VW){
+//     totalPrice = weight*countryvalue;
+//    }
+//    else{
+//     totalPrice = VW*countryvalue;
+//    }
+
+
+    // setPrice(totalPrice);
+  };
+
+
+
+  const [errors, setErrors] = useState({});
+
+  const validateInput = () => {
+    const newErrors = {};
+
+    // Check if the input values exceed the maximum allowed value
+    if (parseFloat(height) > 150 && parseFloat(height)!==0) {
+      newErrors.height = 'Height cannot exceed 150';
+    }
+    if (  parseFloat(height) === 0 ) {
+      newErrors.height = 'Please add height';
+    }
+
+
+    if (parseFloat(width) > 120 && parseFloat(width)!==0) {
+      newErrors.width = 'Width cannot exceed 120';
+    }
+    if (  parseFloat(width) === 0 ) {
+      newErrors.width = 'Please add width';
+    }
+
+    if (parseFloat(Length) > 240  && parseFloat(Length)!==0) {
+      newErrors.Length = 'Length cannot exceed 240';
+    }
+    if (  parseFloat(Length) === 0 ) {
+      newErrors.Length = 'Please add Length';
+    }
+
+    if (parseFloat(weight) > 30 && parseFloat(weight)!==0 ) {
+      newErrors.weight = 'Weight cannot exceed 30';
+    }
+
+    if (  parseFloat(weight) === 0 ) {
+      newErrors.weight = 'Please add weight';
+    }
+
+    if (  selectedCountry === 0 ) {
+      newErrors.selectedCountry = 'Please select country';
+    }
+
+    setErrors(newErrors);
+  };
+  const data1={
+name:'pakistan'
   }
-  .form-group.focused input[type='number'],
-  .form-group.focused select {
-    border-color: red; /* Change border color to red when focused */
+const [countryarray,setcountryarray]=useState([data1]);
+
+  const accessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6InRvZmlxIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoidG9maXFtYW1tYWRvdkBtYWlsLnJ1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoic3VwZXJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3N1cm5hbWUiOiJxIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvc3lzdGVtIjoiOSIsImV4cCI6MTY5MjA0MDY3NywiaXNzIjoid3d3LnRlc3QuY29tIiwiYXVkIjoid3d3LnRlc3QuY29tIn0.uvgRY1X93Pwogp4PZCWBlthNyQsDl7QzF_gOoVwJD40'
+
+
+  const fetchCountries = async () => {
    
-  }
-  .error {
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
-  }
-
-  .custom-output-box {
-    display: flex;
-    flex-direction: row;
-    margin-top: 0px; /* Add margin between the last input group and output box */
-   
-   
-    padding: 8px;
-    margin-top: 0px;
-    font-size: 10px;
-    font-weight: bold;
-    text-align: center;
-  }
-
-  .custom-output-box label {
-    /* Add styles for the label inside the output box */
-    /* For example, you can change the label's font size, color, etc. */
-    font-size: 18px;
-    color: #333;
-  }
-  
-  .custom-output-box div {
-    /* Add styles for the price value inside the output box */
-    /* For example, you can change the font size, color, etc. */
-    padding-top: -5px;
-    font-size: 20px;
-    color: #ff5733;
-  }
+    // Using fetch API
+    fetch("/api/GetCountries", {
+      method: "GET",
+      headers: {
+        Accept: "text/plain",
+        Authorization: `Bearer ${accessToken}`,
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok.");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log('data:',data)
+        var dani = data;
+        setcountryarray(data)
+       
+        console.log('countryarray:',countryarray)
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
 
 
-  .buttons-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    padding: 5px;
-  }
+  };
   
-  .calculate-btn,
-  .reset-btn{
-    width: auto;
-  }
-  .calculate-btn,
-  .reset-btn {
-    flex: 1;
-    padding: 10px;
-    font-size: 16px;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .calculate-btn {
-    background-color: #3e2fa3;
-  }
-  
-  .reset-btn {
-    background-color: #dc3545;
-  }
-  
-  .calculate-btn:hover,
-  .reset-btn:hover {
-    background-color: #180e69;
-  }
-  
-  i {
-    margin-right: 5px;
-  }
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-  }
-  
-  .modal-content h2 {
-    margin-bottom: 10px;
-  }
-  
-  .modal-content p {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .modal-content button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .modal-content button:hover {
-    background-color: #0056b3;
-  }
-  
-  .large-paragraph-section {
-    /* Add your custom styles for the large paragraph section here */
-    margin-top: 30px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-    font-size: 16px;
-    line-height: 1.6;
-  }
+  useEffect(() => {
+    console.log('Updated countryarray:', countryarray);
+  }, [countryarray]);
+
+useEffect(()=>{
+fetchCountries();
+},[])
 
 
+  return (
 
-  @media (max-width: 768px) {
-    .page-container {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      /* Adjust padding for smaller screens */
-    }
-    
-  .calculateprice h2{
-    margin-bottom: 10px;
-  }
+<>
+    <div className='page-container'>
 
-    /* .form-group  */
-    .my_form_group {
-      margin-bottom: 5px; /* Adjust margin for better spacing on small screens */
-    }
-  
-    /* .input_boxes */
-    .customize_input_boxes {
-      display: flex;
-      flex-direction: column; /* Change to column layout for small screens */
-    }
-                                 /* .form-group */
-   .calculateprice .customize_input_boxes .my_form_group input[type="number"]{
- width: 90%;
-    }
-                       
-                    /* .form-group */
-    .calculateprice .my_form_group select{
-      width: 96%;
-    }
-  
-    .buttons-container {
-      display: flex;
-      flex-direction: column; /* Change to column layout for small screens */
-    }
-  
-    .calculate-btn,
-    .reset-btn {
-      width: auto; /* Make the buttons full-width on small screens */
-      margin-bottom: 10px; /* Adjust margin for better spacing on small screens */
-    }
-  
-    .large-paragraph-section {
-      padding: 10px; /* Adjust padding for smaller screens */
-    }
-  
-    /* Optionally, you can adjust the font sizes for better readability on smaller screens */
-    h2 {
-      font-size: 24px;
-    }
-  
+      <div className='db'>
+           <Db/>
+      </div>
+    <div className='calculateprice' id="calculateprice">
+      <h2><Trans i18nKey="description.calpart1">Calculate Delivery Price:</Trans></h2>
 
-    /* .form-group  */
-    .my_form_group label {
-      font-size: 14px;
-    }
-  
-    input[type="number"] {
-      font-size: 14px;
-      padding: 10px;
-    }
-  
-    .custom-output-box label {
-      font-size: 14px;
-    }
-  
-    .custom-output-box div {
-      font-size: 18px;
-    }
-  
-    .large-paragraph-section p {
-      font-size: 14px;
-    }
-  }
+      <div className="form-group my_form_group">
+        <label><Trans i18nKey="description.calpart2">Choose Country:</Trans> </label>
+        <select value={selectedCountry} onChange={handleCountryChange}
+        style={{ borderColor: errors.selectedCountry ? 'red' : '' }}
+        >
+          {/* <option value="">Select Country</option>
+          <option value="Pakistan">Pakistan</option>
+          <option value="Azerbaijan">Azerbaijan</option>
+          <option value="Russia">Russia</option>
+          <option value="Uzbekistan">Uzbekistan</option>
+          Add more country options as needed */}
+ <option value="">Select Country</option>
+{countryarray.map((country, index) => (  
+          <option key={index} value={country.name}>
+            {country.name}
+          </option>
+        ))}
+
+        </select>
+        {errors.selectedCountry && <div className="error">{errors.selectedCountry}</div>}
+      </div>
+
+  <div className='input_boxes customize_input_boxes'>
+      <div className="form-group my_form_group">
+        <label><Trans i18nKey="description.calpart3">Height(max 150 cm): </Trans></label>
+        <input type="number" value={height} onChange={(e) => setHeight(e.target.value)} 
+         style={{ borderColor: errors.height ? 'red' : '' }}
+        />
+         {errors.height && <div className="error">{errors.height}</div>}
+      </div>
+      <div className="form-group my_form_group">
+        <label><Trans i18nKey="description.calpart4">Width(max 120 cm):</Trans> </label>
+        <input type="number" value={width} onChange={(e) => setWidth(e.target.value)} 
+         style={{ borderColor: errors.width ? 'red' : '' }}
+        />
+         {errors.width && <div className="error">{errors.width}</div>}
+      </div>
+      <div className="form-group my_form_group">
+        <label><Trans i18nKey="description.calpart5">Length(max 240 cm):</Trans> </label>
+        <input type="number" value={Length} onChange={(e) => setLength(e.target.value)} 
+         style={{ borderColor: errors.Length ? 'red' : '' }}
+        />
+         {errors.Length && <div className="error">{errors.Length}</div>}
+      </div>
+      <div className="form-group my_form_group">
+        <label><Trans i18nKey="description.calpart6">Weight(max 30 kg):</Trans> </label>
+        <input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} 
+         style={{ borderColor: errors.weight ? 'red' : '' }}
+        />
+         {errors.weight && <div className="error">{errors.weight}</div>}
+      </div>
+      {Object.keys(errors).length === 0 && ( // Render the output box only if there are no errors
+        <div className="custom-output-box">
+          <label><Trans i18nKey="description.calpart7">Price: </Trans></label>
+          <div>{price}$</div>
+        </div>
+      )}
+
+      </div>
+
+      <div className="buttons-container">
+        <button className="calculate-btn" onClick={handleCalculate}>
+          <Trans i18nKey="description.calpart8">Calculate</Trans>
+        </button>
+        {price !== null && (
+          <button className="reset-btn" onClick={() => settonull()}>
+            <Trans i18nKey="description.calpart9">Reset</Trans>
+          </button>
+        )}
+      </div>
+      <div className="large-paragraph-section">
+          
+          <p>
+          * <Trans i18nKey="description.calpart10">Gönderilerin ağırlığı hesaplanırken tartı üzerindeki ağırlığı ve hacimsel ağırlığı(desi) baz alınır.Hacimsel ağırlık hesaplamalarında gönderinizin en boy ve yükseklik değerlerinin birbiri ile çarpılmasının 5000 ile bölümü ile bulunmaktadır. (Uzunluk * Genişlik * Yükseklik) / 5000 = Ağırlık</Trans>
+          <br></br>
+          * <Trans i18nKey="description.calpart11">Paketin geçerli ağırlığını hacimsel ağırlığıyla karşılaştırın. İki ağırlıktan daha ağır olanı, faturalandırılabilir ağırlıktır ve fiyatı hesaplamak için bunun kullanılması gerekir.</Trans>
+          <br></br>
+          * <Trans i18nKey="description.calpart12">Gönderimleriniz gümrükleme gerektirmeyebilir. Gümrük ücretleri ve vergileri, öğelerinizin içeriğine ve değerine ve ülkenizin düzenlemelerine göre hesaplanır.</Trans>     
+          </p>
+          {/* Add more paragraphs or additional content as needed */}
+        </div>
+     
+
+    </div>
+    </div>
+    </>
+  );
+};
+
+export default Calculateprice;
