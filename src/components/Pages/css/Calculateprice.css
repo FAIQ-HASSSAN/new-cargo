@@ -29,11 +29,15 @@ background-color: #f8fafc;
 
   }
 
-  .input_boxes{
+
+  /* .input_boxes  */
+  .customize_input_boxes{
    display: flex;
    flex-direction: row;
   }
-  .form-group {
+
+  /* .form-group  */
+  .my_form_group {
     padding: 5px;
     margin-bottom: 20px;
     display: flex;
@@ -41,7 +45,9 @@ background-color: #f8fafc;
     position: relative;
   }
   
-  .form-group label {
+
+  /* .form-group  */
+  .my_form_group label {
     margin-bottom: 5px; 
     position: absolute;
     top: -5px;
@@ -67,11 +73,14 @@ background-color: #f8fafc;
   }
   
 
-  .form-group select{
+  /* .form-group  */
+  .my_form_group select{
     width: auto;
   }
 
-  .form-group.focused input {
+
+  /* .form-group  */
+  .my_form_group.focused input {
     color: red; /* Change label text color to red when focused */
     font-weight: bold;
   }
@@ -225,20 +234,24 @@ background-color: #f8fafc;
   .calculateprice h2{
     margin-bottom: 10px;
   }
-    .form-group {
+
+    /* .form-group  */
+    .my_form_group {
       margin-bottom: 5px; /* Adjust margin for better spacing on small screens */
     }
   
-    .input_boxes {
+    /* .input_boxes */
+    .customize_input_boxes {
       display: flex;
       flex-direction: column; /* Change to column layout for small screens */
     }
-
-   .calculateprice .input_boxes .form-group input[type="number"]{
+                                 /* .form-group */
+   .calculateprice .customize_input_boxes .my_form_group input[type="number"]{
  width: 90%;
     }
-
-    .calculateprice .form-group select{
+                       
+                    /* .form-group */
+    .calculateprice .my_form_group select{
       width: 96%;
     }
   
@@ -262,7 +275,9 @@ background-color: #f8fafc;
       font-size: 24px;
     }
   
-    .form-group label {
+
+    /* .form-group  */
+    .my_form_group label {
       font-size: 14px;
     }
   
