@@ -1,0 +1,229 @@
+.leftside{
+    display: flex;
+  justify-content: space-between; /* Move the form container to the right side */
+  height: 100vh; /* Adjust the height as needed */
+  align-items: center; /* Vertically center the form container */
+  padding: 0 20px; /* Add some padding on the sides for spacing */
+  margin-bottom: 10px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+
+
+.h1_1{
+    font-size: 50px;
+    font-weight: bold;
+}
+.h1_2{
+    color: #007bff;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.p1{
+    font-size: 20px;
+}
+.form-container {
+    width: 40%;
+  }
+  
+  .form-container h2 {
+    margin-bottom: 10px;
+    margin-left: 100px;
+    font-size: 35px;
+  }
+  
+  .form-container input {
+    width: 70%;
+    height: 20px;
+    font-size: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.2s ease;
+  }
+  
+  .form-container input:focus {
+    border-color: blue;
+  }
+  
+  .form-container button {
+    margin-top: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #3e2fa3;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .form-container button:hover {
+    background-color: #0056b3;
+  }
+
+  .welcome-container {
+    width: 40%; /* Set the width of the left container */
+    padding-left: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+      margin-left: 50px;
+  }
+
+  .main_logo{
+    width: 170px; 
+    height: 70px; 
+    margin-bottom: 10px;
+}
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .input-group label {
+    font-weight: bold;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .checkbox-item {
+    margin-bottom: 10px;
+  }
+  
+  .checkbox-item label {
+    display: inline-block;
+  }
+
+
+  .Button{
+    padding-top: 15px;
+   
+   }
+   .login-btn {
+       width: 370px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 10px; 
+       padding: 8px 16px;
+       font-size: 18px;
+       background-color: #007bff; 
+       color: white; 
+       border: none;
+       cursor: pointer;
+       border-radius: 8px;
+     }
+     
+     .login-btn i {
+       margin-right: auto; /* Move the lock icon to the leftmost position */
+     }
+     .login-btn span {
+       flex: 1; /* Let the "Login" text take the remaining space and center it */
+   
+     }
+   
+     .login-btn:hover {
+       background-color: #0056b3; /* Example hover background color */
+     }
+
+     .login{
+        display: flex;
+        flex-direction: row;
+        margin-left: 120px;
+     }
+     .loginlink{
+        padding-left: 5px;
+        padding-right: 10px;
+        text-decoration: none;
+        color: blue;
+    }
+
+    .form-container .remember {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      right: 9px;
+    }
+
+
+    .rlinks-container {
+      display: flex;
+      flex-direction: row;
+    
+    }
+    
+    .rlinks-container a {
+      text-decoration: underline;
+      color: blue;
+     
+    }
+    
+    .rlinks-container a:hover {
+      text-decoration: none;
+    }
+   
+    @media (max-width: 767px) {
+      .leftside {
+        flex-direction: column;
+        padding: 0 10px;
+        width: 100%;
+      }
+    .welcome-container{
+      margin: auto;
+      width: 100%;
+      position: relative;
+      right: 70px;
+    }
+
+    .form-container{
+     
+      width: 95%;
+    }
+      .welcome-container,
+      .form-container {
+        width: 95%;
+        padding-right: 10px;
+      }
+    
+      .form-container h2 {
+        margin-left: 0;
+        font-size: 20px;
+        text-align: center;
+       
+      }
+     .h1_1{
+      font-size: 30px;
+     }
+     .h1_2{
+      font-size: 30px;
+     }
+     p1{
+      font-size: 15px
+     }
+      .form-container input {
+        width: 95%;
+        font-size: 14px;
+      }
+    
+      .form-container .login-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+    
+      .login {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+      }
+    }
+  

@@ -1,0 +1,117 @@
+.after-login-page {
+    display: flex;
+  }
+  
+  .leftcontainer {
+    flex: 1;
+    height: 100vh;
+    background-color:#f8fafc;
+  }
+  
+  .leftcontainer a {
+    text-decoration: none;
+  }
+  
+  .lright-container {
+    flex: 3;
+    height: 50vh;
+    width: auto;
+    border: 1px solid #ccc;
+  }
+
+  /* Styles for the banner image */
+  .banner-img { 
+    border: 1px solid black;
+   height: 400px;
+   width: 950px;
+   
+  }
+
+  /* Styles for the buttons */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .button-container button{
+    background-color: white;
+    height: 70px;
+    color: black;
+  }
+  .button-container button:hover{
+  background-color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  }
+
+  .custom-button1 {
+
+    flex: 1;
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    padding: 20px;
+    border: none;
+    border-radius: 30px;
+    margin-right: 5px;
+    background-color: black;
+  }
+  
+  .custom-button1:last-child {
+    margin-right: 0;
+  }
+  
+ 
+  
+  .custom-button1 .button-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .custom-button1 .button-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size:15px;
+  }
+  
+  .custom-button1 .button-text p {
+    padding-left: 5px;
+  }
+  .custom-button1 .button-icon {
+    margin-left: 10px;
+    font-size: 24px;
+  }
+
+
+@media (max-width: 768px) {
+  .after-login-page {
+    flex-direction: column; /* Change the direction of the page content to a vertical layout */
+ width: 100%;
+  }
+
+  .leftcontainer {
+    width: 100%; /* Make the left container take up the full width on smaller screens */
+  }
+
+  .lright-container {
+    width: 100%; /* Make the right container take up the full width on smaller screens */
+  }
+
+  .banner-img {
+    max-width: 99.5%; /* Make the banner image responsive, it will scale to fit the width of the container */
+  }
+
+  .button-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line on smaller screens */
+    justify-content: center; /* Center the buttons horizontally */
+    margin-top: 20px; /* Add some spacing between the banner and buttons */
+  }
+
+  .custom-button1 {
+    width: 45%; /* Adjust the button width to fit two buttons per row on smaller screens */
+    margin: 5px; /* Add some spacing between the buttons */
+  }
+}

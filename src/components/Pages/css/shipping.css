@@ -1,0 +1,211 @@
+.shipping {
+    display: flex;
+  }
+  
+  .l_container {
+    flex: 1;
+  }
+
+  .r-container {
+    flex: 3;
+    height: 100vh;
+  }
+  .r-container .section h3{
+    padding: 10px;
+  }
+
+.r-container .form-group-row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .r-container .form-group {
+    /* Adjust the margin to create space between form groups */
+    margin-right: 20px;
+  }
+  
+  .r-container .form-group input {
+    /* Update the height for consistency */
+    height: 30px;
+  }
+
+
+
+  .r-container .section select{
+    width: 220px;
+  }
+  
+  /* Style the file upload input fields */
+  .r-container .form-group input[type="file"] {
+    /* Remove default styles to hide the default file input appearance */
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+    display: block;
+    position: relative;
+    width: 150px;
+  }
+  
+  .r-container .form-group input[type="file"]::before {
+    /* Styling for the "Choose File" part */
+    content: 'Choose File';
+    display: block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: #3e2fa3;
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Change the color when hovering over the button */
+  .r-container .form-group input[type="file"]:hover::before {
+    background-color: darkblue;
+  }
+  
+  /* Style the table */
+  .r-container .section table {
+   width: auto;
+    border-collapse:collapse;
+
+  }
+  
+  .r-container .section table th,
+  .r-container .section table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+   
+  }
+  
+  
+  
+  .r-container .section table tbody tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .r-container .section table button {
+    padding: 5px 10px;
+    background-color: #3e2fa3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .r-container .section table button:hover {
+    background-color: darkblue;
+  }
+
+
+  .upload-button {
+    /* Remove default styles to hide the default file input appearance */
+    border: none;
+    outline: none;
+    background-color: #3e2fa3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upload-button:hover {
+    background-color: darkblue;
+  }
+  
+  /* Hide the file input */
+  .table-wrapper input[type="file"] {
+    display: none;
+  }
+
+
+  .confirmation-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .confirmation-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .confirmation-content p{
+    font-size: large;
+  }
+  .confirmation-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .confirmation-buttons button {
+    margin-left: 10px;
+    width: 70px;
+    height: 40px;
+    color: white;
+    background-color: #3e2fa3;
+    border: 1px solid #3e2fa3;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+  /* Add media queries for responsiveness */
+@media (max-width: 768px) {
+  .shipping {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .l_container {
+    width: 100%;
+  }
+
+  .r-container {
+    width: 100%;
+  }
+
+  .section {
+    margin-bottom: 20px;
+  }
+
+  .form-group-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .table-section table {
+    min-width: 100%;
+  }
+
+  .table-section th,
+  .table-section td {
+    white-space: nowrap;
+  }
+}
+  
+
+
+  

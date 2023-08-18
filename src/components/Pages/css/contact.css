@@ -1,0 +1,44 @@
+.Footer{
+    border-top: 1px solid black;
+}
+
+@media (max-width: 768px){
+
+
+    .form_Box2 textarea {
+
+        width: initial;
+        margin: initial;
+        width: 80%;
+        margin-left: 9%;
+      }
+      
+      
+      .form_Box2 button {
+        margin: initial;
+        margin-left: 9%;
+      }
+      
+    
+}
+
+@media screen and (min-width:769px) and (max-width:849px)
+{
+    .form_Box2 textarea {
+
+        width: initial;
+        margin: 0%;
+        width: 80%;
+        
+      }
+
+      .form_Box2 {
+        display: flex;
+        flex-direction: column;
+        width: initial;
+        margin: initial;
+        width: 50%;
+        margin-top: 10px;
+        margin-right: -3%;
+    }
+}

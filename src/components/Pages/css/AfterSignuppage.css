@@ -1,0 +1,176 @@
+
+.signup-page {
+    display: flex;
+  }
+.settings{
+    margin-right: auto;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+  .sleft-container {
+    flex: 1;
+    background-color: #f8fafc;  
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+  }
+  
+  .sleft-container ul {
+    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sleft-container li {
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.2s;
+  }
+  .sleft-container .log{
+    display: none;
+  }
+  .sleft-container li:hover {
+    background-color: rgb(84, 168, 196);
+  }
+  
+  .sleft-container .calculate-link {
+    text-decoration: none;
+  }
+  
+  .sright-container {
+    flex: 3;
+    padding: 0px;
+    margin-top: -1px;
+    display: flex;
+    flex-direction: column; /* Set flex direction to column */
+    align-items: center; /* Center the form horizontally */
+   
+  }
+  
+  .sright-container form {
+    width: 90%; 
+  }
+  .form-group1{
+    display: flex;
+    flex-direction: row;
+  }
+  .sright-container .form-group {
+    display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  }
+
+  .sright-container select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    width: 320px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .form-group div {
+    /* Set flex basis to 50% to take up half of the row width */
+    flex-basis: 50%;
+    /* Add padding to create space between form fields */
+    padding: 0 5px;
+  }
+  .sright-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .sright-container input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    width: 300px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .sright-container button {
+    padding: 10px 20px;
+    background-color: #3e2fa3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .sright-container button:hover {
+    background-color: #0056b3;
+  }
+
+  .form-group .error-text {
+    color: red;
+    font-size: 12px;
+  }
+  
+  .form-group .error {
+    border-color: red;
+  }
+
+  .input-error-container {
+    display: flex;
+    flex-direction: column;
+  }
+.input-error-container1{
+  height: 37px;
+}
+  @media screen and (max-width: 1024px) {
+    .signup-page {
+      flex-direction: column;
+      width: 100%;
+      
+    }
+  
+   
+  
+    .sright-container {
+      width: 100%;
+      
+    }
+  
+    
+  }
+  
+  @media screen and (max-width: 768px) {
+    .signup-page{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .sleft-container{
+      display: flex;
+     
+    }
+
+    .sleft-container .log{
+      display: flex;
+      position: relative;
+      left: 5px;
+      padding-left: 5px;
+    }
+    .sright-container{
+      margin-top: -15px;
+    }
+    .form-group1 {
+      flex-direction: column;
+    }
+  
+    .form-group {
+      flex: 100%;
+    }
+  
+    .form-group1 .form-group select{
+      width: 183%;
+    }
+    .form-group input {
+      width: 170%;
+    }
+  
+    .form-group button {
+      width: auto;
+      margin-left: 7px;
+    }
+  }
+  

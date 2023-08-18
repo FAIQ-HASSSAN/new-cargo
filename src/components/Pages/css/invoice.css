@@ -1,0 +1,118 @@
+.invoice_page {
+  display: flex;
+}
+
+.leftcontainer {
+  flex: 1;
+  background-color: #f8fafc;
+}
+
+.main-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sub-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sub-menu li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.rightcontainer {
+  flex: 3;
+  height: 100vh;
+}
+
+.rightcontainer .section {
+  margin-bottom: 20px;
+}
+
+.rightcontainer .section h2 {
+  display: flex;
+  align-items: center;
+  background-color: rgb(158, 167, 167);
+  width: auto;
+  height: 70px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+/* Style the card container in row format */
+.rightcontainer .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+/* Style the bank cards */
+.rightcontainer .bank-card {
+  cursor: pointer;
+  background-color: #a99d9d;
+  border: 1px solid #111010;
+  padding: 20px;
+  width: 100px; /* Adjust the width as needed */
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+  margin: 10px;
+}
+
+.rightcontainer .bank-card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.rightcontainer .bank-card p {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.rightcontainer .bank-logo img {
+  width: 100px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+/* Show the card container when open */
+.rightcontainer .section.open .card-container {
+  max-height: 300px; /* Adjust the max height as needed */
+}
+
+
+/* For mobile devices */
+@media screen and (max-width: 768px) {
+  .invoice_page {
+    flex-direction: column; /* Change the flex direction to stack elements vertically */
+    width: 100%;
+  }
+
+  .rightcontainer .section h2 {
+    width:auto; /* Set the width of the h2 element to take up the full width on smaller screens */
+  }
+
+  .rightcontainer .bank-card {
+    width: auto; /* Adjust the width of the bank card to fit the screen width */
+  }
+}
+

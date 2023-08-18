@@ -1,0 +1,126 @@
+
+.main{
+    background-color: rgb(248, 250, 252);
+    /* height: 50vh; */
+    margin-top: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+.main >h4{
+    text-align: center;
+    color:#475569;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+
+
+.body{
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.images-logo{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    margin-left: 30px;
+    padding-left: 30px;
+}
+.main_logoandtext{
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+}
+.image_logo1{
+    background-color: lightblue;
+    border-radius: 20px;
+    margin-top: 2rem;
+    width:  120px;
+     padding: 10px;
+}
+
+.image_logo1 img{
+    width: 100px;
+    height: 80px;
+    align-self: center;
+    margin-left: 10px;
+    
+}
+
+.images-logo1 .pic1{
+    width: 60px;
+    height: 80px;
+}
+.images-logo1 .pic2{
+    width: 60px;
+    height: 80px;
+}
+.images-logo1 .pic3{
+    width: 60px;
+    height: 80px;
+}
+.images-logo1 .pic4{
+    width: 60px;
+    height: 80px;
+}
+
+
+.text-leftside{
+    text-align: center;
+    padding-left: 3rem;
+    padding-right:3rem ;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.text-leftside h3 {
+    color: #475569;
+}
+
+
+
+@media (max-width: 768px) {
+    .main{
+        width: 100%;
+       
+    }
+    .main_logoandtext{
+        flex-direction: column; /* Change to a vertical layout for smaller screens */
+        align-items: center; /* Center the content in the container */
+    }
+
+    .images-logo{
+        width: 60%; /* Make the logos container take up 80% of the width on smaller screens */
+        margin-left: 0;
+        padding-left: 0;
+        justify-content: space-evenly; /* Adjust the spacing between logos for smaller screens */
+    }
+
+    .image_logo1{
+        width:  90px;
+        height: 80px; /* Make the height the same as width to ensure the logo is displayed as a square */
+        margin-top: 1rem;
+       
+    }
+
+    .image_logo1 img{
+        position: relative;
+        right: 5px;
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+    }
+
+    .text-leftside{
+        margin-top: 10px;
+        padding-left: 0.5rem; /* Reduce the left and right padding for smaller screens */
+        padding-right: 0.5rem;
+    }
+
+    .text-leftside h3 {
+        font-size: 16px; /* Adjust the font size for smaller screens */
+    }
+}

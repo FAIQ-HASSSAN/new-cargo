@@ -1,0 +1,67 @@
+.GDPR{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.GDPR h2{
+    margin: 1rem;
+    background-color: lightgray;;
+    padding: 40px;
+    text-align: center;
+}
+.para_container p{
+    font-size: 17px;
+    font-weight: 400;
+}
+.para_container ul{
+    margin-left: 3rem;
+}
+
+.para_container ol{
+    margin-left: 3rem;
+}
+
+
+.para_container{
+margin: 3rem;
+ margin-bottom: 2rem;
+ text-align: justify;
+ text-justify: inter-word;
+}
+
+.para_container h3{
+    margin-top: 1rem;
+}
+
+.g_foot{
+    border-top: 1px solid black;
+}
+
+@media (max-width: 767px) {
+    .GDPR{
+      width: 100%;
+    }
+.g_foot{
+    width: 100%;
+    border-top: 1px solid rgb(237, 229, 229);
+}
+
+.g_footer{
+    border: 1px solid black;
+    width: 100%;
+}
+
+    .GDPR h2{      
+        width: 75%;
+        margin-left: 0.3rem;
+    }
+
+    .GDPR .para_container{
+       
+        width: 95%;
+        margin-left: 0.5rem;
+        margin-right: auto;
+        margin-top: auto;
+    }
+  }

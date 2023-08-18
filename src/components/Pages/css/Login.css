@@ -1,0 +1,166 @@
+.container{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 30%;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+  
+}
+
+.H1{
+    padding-top: 15px;
+}
+
+
+.signup{
+    display: flex;
+    flex-direction: row;
+    padding-top: 8px;
+}
+
+
+.Input{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding-top: 25px;
+   
+}
+
+.Input input{
+    width: 370px; 
+    height: 12px; 
+    font-size: 20px; 
+    padding: 12px;
+    border: 1px solid #ccc; 
+     transition: border-color 0.2s ease; 
+     border-radius: 3px;
+   
+     max-width: 370px; 
+}
+
+.Input input:focus {
+    border-color: blue; 
+    outline: none; 
+}
+
+.Input   input::placeholder {
+    font-size: 15px; 
+    opacity: 0.6; 
+  }
+
+  .container img{
+    width: 170px;
+  height: 50px;
+  margin-right: 15px;
+  }
+
+
+
+
+
+.signuplink{
+    padding-left: 5px;
+    text-decoration: none;
+    color: blue;
+}
+
+.remember > .label1{
+    padding-right: 10px;
+}
+.signuplink1{
+    padding-left: 5px;
+    text-decoration: none;
+    color: blue;
+}
+.remember{
+    width: 370px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+    padding-top: 10px;
+}
+
+
+.remember label,
+.remember .signuplink {
+  flex-grow: 1;
+}
+.Button{
+ padding-top: 15px;
+
+}
+.login-btn {
+    width: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    padding: 8px 16px;
+    font-size: 18px;
+    background-color: #606365; 
+    color: white; 
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  .login-btn i {
+    margin-right: auto; 
+  }
+  .login-btn span {
+    flex: 1; 
+
+  }
+form .login-btn{
+  background-color:#3e2fa3;
+}
+  .login-btn:hover {
+    background-color: #0056b3; 
+  }
+
+  .Button a{
+    text-decoration: none;
+    color: white;
+  }
+
+  /* For screens smaller than 768px (e.g., mobile devices) */
+@media (max-width: 768px) {
+  .container {
+    width: 100%; /* Adjust the width for smaller screens */
+    max-width: none; /* Remove the maximum width for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+    padding-left: 25px;
+  }
+
+  .signup,
+  .Input,
+  .remember,
+  .Button {
+    width: auto; /* Make these sections occupy full width on smaller screens */
+    max-width: none; /* Remove the maximum width for smaller screens */
+  }
+
+  .Input input {
+    width: auto; /* Make the input fields occupy full width on smaller screens */
+  }
+
+  .remember {
+    flex-direction: row; /* Stack the elements vertically on smaller screens */
+   align-items: center;/* Center the elements horizontally on smaller screens */
+  }
+
+  .Button {
+    width: auto;
+    text-align: center; /* Center the button on smaller screens */
+  }
+
+  .Button button{
+    width: auto;
+  }
+}

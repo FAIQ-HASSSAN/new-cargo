@@ -1,0 +1,286 @@
+html
+{
+  scroll-behavior: smooth;
+}
+
+.main_home_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+section {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.main_home_text{
+    width: 40%;
+}
+.main_home_text>h1{
+    color: black;
+    font-size: 40px;
+    font-weight:400;
+    margin-bottom: 1rem;
+}
+.main_home_text>p{
+    color: gray;
+    font-size: 20px;
+    font-weight:300;
+    margin-bottom: 1rem;
+    text-align: justify;
+  text-justify: inter-word;
+}
+
+.btn{
+    background-color: #3e2fa3;
+    cursor: pointer;
+}
+
+
+
+.image-here{
+    border: 1px black solid;
+    width: 330px;
+    height: 330px;
+}
+.brands{
+    margin-top: 5rem;
+    text-align:center ;
+    justify-content: center;
+    display: flex;
+}
+
+.brands img {
+    width: 500px;
+    height: 100px;
+    display: flex;;
+}
+
+
+.partion_line{
+    width: 100%;
+    height: 1px;
+    background-color: gray;
+    margin-top: 5rem;
+}
+
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .main_home_container {
+      display: flex;
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      margin-top: 1rem;
+      width: 100%;
+   
+    }
+    .partion_line{
+      width: 100%;
+    }
+
+    .pages {
+      overflow: hidden;
+  }
+  
+    .main_home_text {
+      width: 90%;
+      width: auto; /* Take up full width on smaller screens */
+       /* Add some spacing between sections */
+      margin: 5px;
+    
+    }
+  
+    .image-here {
+      width: auto; /* Adjust image size for smaller screens */
+      height: 260px;
+      margin-top: 15px;
+      
+    }
+  
+    .brands img {
+      width: 300px; /* Adjust logo size for smaller screens */
+      height: 60px;
+    }
+
+
+  .nav-icon {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.5srem;
+    cursor: pointer;
+    color: gray;
+    /* margin-left: 60px; */
+    margin-right: 4%;
+  }
+
+
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    max-width: 1500px;
+    margin-left: 9%;
+  }
+
+ 
+
+.form_Box2 textarea {
+
+  width: initial;
+  margin: initial;
+  width: 80%;
+  margin-left: 9%;
+}
+
+
+.form_Box2 button {
+  margin: initial;
+  margin-left: 9%;
+}
+
+p.customize_para {
+  padding: 0 10px;
+}
+
+
+
+  }
+
+  @media screen and (min-width:769px) and (max-width:1100px)
+  {
+   
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      text-align: center;
+      margin-right: 2rem;
+      font-size: 12px;
+  }
+
+
+  .main_logoandtext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+ 
+.card_main_flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: initial;
+  margin-left: 4rem;
+  margin-right: 6rem;
+}
+
+.cardbg {
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
+  flex: 25%;
+  margin: initial;
+  padding: initial;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 50px;
+  position: relative;
+  margin-top: 4rem;
+  height: 250px;
+  margin-left: 7%;
+}
+
+.form_Box1 {
+
+  width: initial;
+  flex: 30%;
+  background-color: rgb(248, 250, 252);
+  padding: initial;
+  margin: initial;
+  padding: 2rem;
+  margin-left: 2%;
+  margin-right: 3%;
+}
+ 
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  max-width: 1500px;
+  margin-left: 2%;
+}
+
+
+.pages {
+  overflow: hidden;
+}
+
+p.customize_para {
+  padding: 0 10px;
+}
+
+
+}
+
+
+@media screen and (min-width:1101px) and (max-width:1919px) {
+  
+.form_Box1 {
+  width: initial;
+  flex: 30% 1;
+  background-color: rgb(248, 250, 252);
+  padding: 2rem;
+  margin: initial;
+  /* margin-left: 2%; */
+  margin-right: 3%;
+}
+
+p.customize_para {
+  padding: 0 10px;
+}
+}
+
+@media screen and (min-width:460px) and (max-width:800px)
+{
+  .form_Box2 textarea {
+
+    width: initial;
+    margin: initial;
+    width: 80%;
+    margin-left: 9%;
+  }
+  
+  
+  .form_Box2 button {
+    margin: initial;
+    margin-left: 9%;
+  }
+  
+  .pages {
+    overflow: hidden;
+}
+
+p.customize_para {
+  padding: 0 10px;
+}
+
+p.customize_para {
+  padding: 0 10px;
+}
+
+}

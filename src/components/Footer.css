@@ -1,0 +1,127 @@
+.footer{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer_main{
+    display: flex;
+    justify-content:space-between;
+    margin: 30px;
+}
+.footer_aboutus h3{
+    font-weight: 500;
+}
+
+.footer_aboutus a{
+    text-decoration: none;
+}
+.footer_aboutus ul li{
+    list-style: none;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.footer_aboutus ul li:hover{
+    border-bottom: 20px solid #3e2fa3;
+    border-width: 3px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.footer_company a {
+    text-decoration: none;
+}
+.footer_company h3 {
+    font-weight: 500;
+}
+.footer_company ul li{
+    list-style: none;
+    margin-top: 1rem;
+    
+}
+.footer_company ul li:hover{
+    border-bottom: 20px solid  #3e2fa3;
+    border-width: 3px;
+    border-radius: 2px;
+    cursor: pointer;
+
+}
+.footer_contactus h3 {
+    font-weight: 500;
+}
+.footer_contactus ul li{
+    list-style: none;
+    margin-top: 1rem;
+}
+.footer_contactus ul li:hover{
+    border-bottom: 20px solid #3e2fa3;
+    border-width: 3px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.footer_payment{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.footer_end{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_end p{
+    margin-right: 2rem;
+}
+.footer_end .icons{
+    margin-right: .5rem;
+}
+
+.footer_contactus a{
+    text-decoration: none;
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+
+    .footer{
+        width: 100%;
+    }
+    .footer_main {
+        display: flex;
+      flex-direction: column; /* Change to column layout for small screens */
+    }
+  
+    .footer_aboutus,
+    .footer_company,
+    .footer_contactus {
+      text-align: center; /* Center the content on small screens */
+      margin-bottom: 20px; /* Add some spacing between sections on small screens */
+    }
+  
+    .footer_payment {
+      text-align: center; /* Center the payment image on small screens */
+    }
+  
+    .footer_end {
+      text-align: center; /* Center the copyright text and social icons on small screens */
+    }
+  
+    /* Optionally, you can adjust the font sizes and icon spacing for better readability on smaller screens */
+    h3 {
+      font-size: 18px;
+    }
+  
+    ul li {
+      font-size: 14px;
+    }
+  
+    .icons {
+      margin: 0 5px; /* Add some spacing between social icons on small screens */
+    }
+
+    .footer_payment img {
+        max-width: 95%; /* Make the payment image responsive by setting its maximum width to 100% */
+        height: auto; /* Maintain the aspect ratio of the image */
+      }
+  }
+  

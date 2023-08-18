@@ -1,0 +1,159 @@
+.about_main1{
+  
+}
+.about_image1{
+  padding-left: 35px;
+  margin-top: 2.8rem;
+  margin-left: 10px;
+}
+.heading {
+  margin-top: 2rem;
+  margin-left: 3rem;
+}
+.heading h2 {
+  font-size: 35px;
+  color: rgb(27, 27, 27);
+  font-weight: 300;
+}
+.heading h3 {
+  font-size: 15px;
+  color: rgb(47, 45, 45);
+  font-weight: 500;
+}
+.about_section_2 {
+  display: flex;
+  
+}
+
+
+
+.about_main1  .about_section_2 p {
+  font-size: 20px;
+  color: rgb(28, 27, 27);
+  font-weight: 400;
+  margin-top: 2rem;
+  margin-left: 3rem;
+    
+}
+.about_main1 .left_side {
+  margin-right: 10px;
+width: auto;  
+text-align: justify;
+  text-justify: inter-word;
+}
+
+.whycome h3 {
+    color: #476659;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 3rem;
+}
+
+.details{
+    display: flex;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    /* width: 90%; */
+}
+.upper_row{
+
+    margin-left: 2rem;
+}
+.upper_row h1{
+    color: #476659;
+    font-size: 20px;
+    margin-top: 3rem;
+    font-weight:600;
+}
+
+.Afooter{
+  margin-top: 30px;
+  border-top: 1px solid black;
+}
+
+@media (max-width: 768px) {
+ 
+.about_main1{
+  width: 100%;
+}
+  .about_main1 .about_section_2{
+    width: 100%;
+  }
+  .about_image1 {
+    padding-left: 10px;
+    margin-top: 0.5rem;
+    margin-left: 0;
+  }
+
+  .heading {
+    margin-top: 2rem;
+    margin-left: 0.7rem;
+  }
+
+  .heading h2 {
+    font-size: 30px;
+  }
+
+  .heading h3 {
+    font-size: 18px;
+  }
+
+  .about_section_2 {
+    flex-direction: column;
+  }
+
+  .about_section_2 p {
+    font-size: 16px;
+    margin-top: 1.5rem;
+    margin-left: 0.3rem;
+  }
+
+  .left_side {
+    width: 100%;
+    margin-right: 20px;
+  }
+  .about_main1 .about_section_2 .left_side p{
+    width: 95%;
+    padding-right: 40px;
+    position: relative;
+    right: 35px;
+  }
+
+  .whycome h3 {
+    font-size: 24px;
+    margin-top: 2rem;
+  }
+
+  .about_main1 .left_side .p{
+    margin-left: 1rem;
+  }
+
+  .details {
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .upper_row {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .upper_row h1 {
+    font-size: 18px;
+    margin-top: 1rem;
+  }
+
+  .Afoot{
+    margin-top: 20px;
+    border-top: 1px solid black;
+    width: 100%;
+  }
+
+
+.Afooter{
+  border-top: 1px solid white;
+}
+ 
+  
+}

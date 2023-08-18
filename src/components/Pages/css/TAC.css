@@ -1,0 +1,61 @@
+.Tac{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.Tac h2{
+    margin: 1rem;
+    background-color: lightgray;;
+    padding: 40px;
+    text-align: center;
+}
+
+.t_para p{
+    font-size: 17px;
+    font-weight: 400;
+
+}
+
+.t_para{
+    margin: 3rem;
+ margin-bottom: 2rem;
+ text-align: justify;
+ text-justify: inter-word;
+}
+
+.t_para h3{
+    margin-top: 1rem;
+}
+
+.t_foot{
+    border-top: 1px solid black;
+}
+
+
+@media (max-width: 767px) {
+    .tac{
+        width: 100%;
+    }
+
+    .Tac h2{
+       
+        width: 75%;
+        margin-left: 0.3rem;
+       
+    }
+.t_footer{
+    border: 1px solid black;
+    width: 100%
+}
+    .Tac .t_para{
+        width: 95%;
+        margin-left: 0.5rem;
+        margin-top: auto;
+    }
+
+    .t_foot{
+        width: 100%;
+        border-top: 1px solid  white;
+    }
+}

@@ -1,0 +1,319 @@
+/* Add your existing CSS styles above */
+
+.create_shipment {
+    display: flex;
+  }
+  
+  .create_shipment .left-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8fafc;
+  }
+  
+  .create_shipment .right-container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 5px;
+  }
+
+  .create_shipment .section {
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .create_shipment .section {
+    margin-bottom: 10px;
+    background-color: #3e2fa3;
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .create_shipment .section h2 {
+    margin-bottom: 10px;
+  }
+  
+  .create_shipment .section.active {
+    background-color: white;
+  }
+  
+  .create_shipment .arrow {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+  }
+  
+  .create_shipment .arrow.down {
+    border-top: 5px solid #333;
+  }
+  
+  .create_shipment .arrow.up {
+    border-bottom: 5px solid #333;
+  }
+  
+  .create_shipment form {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .create_shipment .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .create_shipment .form-group input{
+    width: auto;
+  }
+
+  .create_shipment .form-group button{
+    background-color: #3e2fa3;
+    color: white;
+    height: 30px;
+    border: 1px solid #3e2fa3;
+    width:25%;
+    margin-left:3px;
+    cursor: pointer;
+  }
+  
+  .create_shipment label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .create_shipment input,
+  .create_shipment select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .create_shipment .product-form-row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .create_shipment .product-form-row input {
+    width: 125px;
+  }
+  
+  .create_shipment .product-form-row .form-group {
+    flex: 1;
+  }
+  
+  .create_shipment .buttons-container {
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -13px;
+  }
+
+ 
+  
+  .create_shipment .buttons-container button {
+    padding: 10px;
+    margin: 0px;
+  }
+  
+.create_shipment .shipping-price{
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+}
+
+.create_shipment .shipping-price p{
+  margin-top: 2px;
+  margin-left: 2px;
+  font-size: large;
+}
+  .create_shipment .add-product-btn{
+    padding-left: 30px;
+  }
+  .create_shipment .delete-product-btn{
+    position: relative;
+    top: 5px;
+    right: 20px;
+  }
+  .create_shipment .add-product-btn,
+  .create_shipment .delete-product-btn {
+    background-color: #3e2fa3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .create_shipment .add-product-btn:hover
+  {
+    background-color: #3e2fa3;
+  }
+
+  .create_shipment .delete-product-btn:hover{
+    background-color: red;
+  }
+  
+  
+  .shipping-modal {
+    position: absolute;
+    top: 50%; /* Position the modal 50% from the top */
+    left: 50%; /* Position the modal 50% from the left */
+    transform: translate(-50%, -50%); /* Center the modal on both axes */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shipping-modal h2 {
+    margin-bottom: 10px;
+  }
+  
+  .shipping-modal p {
+    margin-bottom: 20px;
+  }
+  
+  .shipping-modal .close-modal-btn {
+    padding: 8px 16px;
+    background-color: #3e2fa3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .gtip{
+    font-size: 10px;
+    width: 145px;
+    mix-blend-mode:normal;
+  }
+
+
+
+  .create_shipment .form-group .save-shipping-btn{
+    position: relative;
+  top: 30px; /* Move the button 20 pixels down from its normal position */
+left: 325px;
+  border-radius: 5px ;
+  }
+
+  .daniform_row{
+    display: flex;
+    flex-direction: row;
+  }
+.daniform_row .form-group input{
+  width: 400px;
+}
+ 
+.daniform_row .form-group select{
+  width: 420px;
+}
+
+  /* Media Query for Responsive Layout */
+@media screen and (max-width: 768px) {
+  .create_shipment {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+   
+  }
+  
+  .left-container{
+    display: flex;
+    width: 100%;
+  }
+
+
+  .create_shipment .right-container .product-form-row .form-group input{
+    width: 300px;
+    padding: 12px;
+   
+  }
+  
+  .create_shipment .right-container {
+    position: absolute;
+   top: 100px;
+  }
+
+.create_shipment .form-group select{
+  width: auto;
+}
+  .create_shipment .product-form-row{
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+  .create_shipment .right-container {
+    min-height: 100%;
+  }
+
+  .create_shipment .buttons-container button{
+    margin: 10px;
+  }
+.create_shipment .add-product-btn{
+  position: relative;
+  right: 150px;
+}
+
+.create_shipment .delete-product-btn{
+  position: relative;
+  right: 150px;
+  padding: 10px;
+  width: 20%;
+}
+  .gtip{
+    font-size: 9px;
+    width: 200px;
+  }
+
+  .create_shipment .form-group .save-shipping-btn{
+    width: auto;
+    position: relative;
+    margin-right: 50px;
+    margin-bottom: 20px;
+  }
+
+  .create_shipment .form-group{
+    display: flex;
+    flex-direction: column;
+  }
+.create_shipment .daniform_row{
+  display: flex;
+  flex-direction: column;
+}
+
+.create_shipment .daniform_row select{
+  width: 325px;
+}
+.create_shipment .daniform_row input{
+  width: 300px;
+  padding: 12px;
+}
+
+.create_shipment .form-group .save-shipping-btn{
+  width: 50%;
+  position: relative;
+top: 20px; /* Move the button 20 pixels down from its normal position */
+left: 0px;
+border-radius: 5px ;
+
+}
+
+}
+  
+ 

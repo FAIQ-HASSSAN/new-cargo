@@ -1,0 +1,162 @@
+/* .editrow{
+  display: flex;
+  flex-direction: row;
+} */
+
+/* .editrowdb{
+  flex: 2;
+  height: 100vh;
+} */
+
+/* .edit-shipping-data{
+  flex: 3;
+  height: 100vh;
+} */
+
+
+
+.edit-shipping-data {
+    
+    margin: 0 auto;
+   
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .edit-shipping-data h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .edit-shipping-data  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .edit-shipping-data .input-group{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .edit-shipping-data .input-group .upload-button{
+    position: relative;
+    left: 10px;
+    padding: 10px;
+  }
+
+  .edit-shipping-data .input-group .filename{
+    position: relative;
+    left: 13px;
+  }
+  
+  .edit-shipping-data .input-group input,
+  .edit-shipping-data .input-group select
+  {
+margin: 0px 10px;
+width: auto;
+  }
+  .edit-shipping-data .input-group select{
+    width: 215px;
+  }
+  .edit-shipping-data label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    position: relative;
+    left: 15px;
+  }
+  .edit-shipping-data label p {
+    position: relative;
+    left: 10px;
+  }
+
+  .edit-shipping-data label .datefield{
+    width: 195px;
+  }
+  
+  .edit-shipping-data label select,
+  .edit-shipping-data label input {
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .edit-shipping-data button {
+    background-color: #3e2fa3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+  }
+  
+
+  .edit-shipping-data .edani{
+    display: flex;
+    flex-direction: row;
+  }
+  .edit-shipping-data .edani button{
+    margin: 5px;
+    position: relative;
+    left: 140px;
+    height: 50px;
+  }
+  .edit-shipping-data button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Customize the select dropdown */
+  .edit-shipping-data select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    border: 1px solid #ccc;
+  }
+  
+  /* Add a custom arrow icon for the select dropdown */
+  .edit-shipping-data select::-ms-expand {
+    display: none;
+  }
+  
+  /* Style the select options */
+  .edit-shipping-data select option {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+
+  
+  
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+
+  .edit-shipping-data {
+    max-width: 90%; /* Adjust maximum width for small screens */
+  }
+.edit-shipping-data .input-group input{
+  margin-left: 1px;
+  width:80%;
+}
+  .edit-shipping-data label {
+    width: 100%;
+    margin-bottom: 10px; /* Reduce margin between form inputs for small screens */
+  }
+
+  .edit-shipping-data .input-group select{
+   width: 85%;
+   margin-left: 1px;
+  }
+
+
+  .edit-shipping-data .input-group {
+    flex-direction: column; /* Change to column layout for small screens */
+  }
+
+  .edit-shipping-data button {
+    margin-top: 20px; /* Increase space between button and form inputs for small screens */
+  }
+
+  .edit-shipping-data .edani button {
+    border-top: 1px solid rgb(178, 36, 60);
+    width: 25%; /* Reset button width for small screens */
+  }
+}

@@ -1,0 +1,131 @@
+/* Styles for the entire page layout */
+.page {
+  display: flex;
+  
+}
+
+.page .MuiSvgIcon-root {
+  /* Your styles for the Material-UI icons go here */
+  position: relative ;
+  top: 5px;
+  /* Add more styles as needed */
+}
+.page .left-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8fafc;
+}
+
+.page .left-container a {
+  text-decoration: none;
+}
+
+.page .main-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page .main-menu li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.page.sub-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page.sub-menu li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.page.right-container {
+  flex: 3;
+}
+
+.page.menu-icon {
+  display: none; /* Hide the icon by default */
+  cursor: pointer;
+  margin-left: 10px; /* Add margin to the left */
+}
+
+.page .menu-icon i {
+  font-size: 24px;
+}
+/* Show the icon on smaller screens using a media query */
+@media (max-width: 768px) {
+
+  
+
+  .page .menu-icon {
+    display: flex; /* Show the hamburger icon on smaller screens */
+    cursor: pointer;
+    position: static;
+    top: 70px;
+    left: 20px;
+    right: auto;
+    z-index: 999; /* Ensure the icon appears above other elements */
+    background-color: rgb(238, 238, 247);
+    width: 6%;
+  }
+  .page .main-menu {
+    position: absolute;
+    top: 100%; /* Position the menu below the icon */
+    left: 0; /* Position the menu on the left side */
+    right: auto; /* Reset the right property */
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    z-index: 999;
+    background-color: white;
+    width: 75%;
+  }
+  .page .main-menu.show {
+    display: flex; /* Show the menu items when the menu is toggled */
+   
+  }
+
+  .page.main-menu li {
+    margin-bottom: 10px; /* Add spacing between each menu item */
+  }
+
+  /* Styles for the dropdown menu */
+  .page .dropdown {
+    position: relative; /* Set the position to relative to allow absolute positioning of the sub-menu */
+  }
+
+  .page .sub-menu {
+    position: relative; /* Position the sub-menu absolutely */
+    top: 0.3rem;
+    left: 0; /* Position it to the right of the parent menu item */
+    right: auto;
+    /* Add a box shadow for a better visual effect */
+    border-radius: 5px;
+    display: none; /* Hide the sub-menu by default */
+    background-color: rgb(84, 168, 196);;;
+   right: 10px;
+  }
+
+  /* Show the sub-menu when the parent menu item is clicked */
+  .page .dropdown:hover .sub-menu {
+    display: block;
+  }
+
+  .page .sub-menu li {
+    margin-bottom: 1px; /* Add spacing between each sub-menu item */
+  }
+  @media (max-width: 768px) {
+    .page .main-menu {
+      right: auto; /* Adjust the right position */
+      left: 0; /* Reset the left position */
+      top: 90px; /* Adjust the top position */
+    }
+  }
+
+  
+}
+

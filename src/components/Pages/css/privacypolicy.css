@@ -1,0 +1,58 @@
+.privacypolicy{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.privacypolicy h2{
+    margin: 1rem;
+    background-color: lightgray;;
+    padding: 40px;
+    text-align: center;
+}
+
+.p_para p{
+    font-size: 17px;
+    font-weight: 400;
+
+}
+
+.p_para{
+    margin: 3rem;
+ margin-bottom: 2rem;
+ text-align: justify;
+ text-justify: inter-word;
+}
+
+.p_para h3{
+    margin-top: 1rem;
+}
+
+.p_foot{
+    border-top: 1px solid black;
+}
+
+@media (max-width: 767px) {
+    .privacypolicy{
+        width: 100%;
+    }
+
+    .privacypolicy h2{
+       margin-left: 0.3rem;
+      width: 75%;
+    }
+
+    .privacypolicy .p_para{
+        margin-top: auto;
+        width: 95%;
+        margin-left:  0.5rem;
+    }
+.p_footer{
+    border: 1px solid black;
+    width: 100%;
+}
+    .p_foot{
+        border-top: 1px solid white;
+        width: 100%;
+    }
+}

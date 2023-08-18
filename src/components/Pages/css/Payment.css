@@ -1,0 +1,122 @@
+/* PaymentPage.css */
+
+.payment-page {
+  display: flex;
+  justify-content: center;
+  }
+  
+
+  .p_db{
+    flex: 1;
+    display: flex;
+    flex-direction:column ;
+    height: 100vh;
+background-color: #f8fafc;
+  }
+
+  .pr_container {
+    flex: 3;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      height: 100vh;
+    }
+
+
+  .top-balance {
+    background-color: #f9f9f9;
+    padding-bottom: 20px;
+    width: 100%;
+    font-size: x-large;
+    font-weight: bold;
+  }
+  
+  .top-balance p {
+   margin-right: auto;
+  }
+  .payment-section1{
+    margin-right: auto ;
+  }
+  .payment-section1 p{
+   color: red;
+  }
+  .payment-section {
+    display: flex;
+   flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .payment-section input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 60%;
+  }
+  
+  .payment-section button {
+    padding: 10px 20px;
+    background-color: #3e2fa3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .transaction-history {
+    margin-top: 20px;
+    width: 100%;
+   
+  }
+  
+  .transaction-item {
+    display: flex;
+    flex-direction: row;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding-left: 10px;
+    justify-content: space-between;
+    margin: 5px;
+  }
+  
+  .transaction-item p {
+    margin: 5px;
+  }
+
+@media screen and (max-width: 768px) {
+  .payment-page {
+    display: flex;
+    flex-direction: column;
+    margin: 4px;
+    width: 100%;
+  }
+  .top-balance,
+  .payment-section1,
+  .transaction-history {
+    width: auto;
+  }
+
+  .payment-section1 .payment-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .payment-section1 .payment-section input {
+    width: auto;
+    margin: 5px;
+  }
+
+  .transaction-item {
+    width: 100%;
+    max-width: 430px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the transaction item horizontally */
+  }
+
+  
+}
+
+/* Add any additional media queries and responsive styles as needed */
+
+  

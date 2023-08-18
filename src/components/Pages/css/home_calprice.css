@@ -1,0 +1,305 @@
+/* CalculatePricePage.css */
+
+
+.h_page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .h_page-container  .h_calpriceimg{
+    flex: 1;
+    display: flex;
+
+  }
+
+  .h_page-container  .h_calpriceimg img{
+  width: 100%;
+  height: 100%;
+  }
+
+
+  .h_page-container .db{
+    flex: 1;
+    display: flex;
+    flex-direction:column ;
+    height: 100vh;
+background-color: #f8fafc;
+  }
+
+  .h_page-container .calculateprice {
+  flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+  }
+  
+
+  .h_page-container .calculateprice h2 {
+    padding: 5px;
+
+  }
+
+  .h_page-container .input_boxes{
+   display: flex;
+   flex-direction: row;
+  }
+  .h_page-container .form-group {
+    padding: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .h_page-container  .form-group label {
+    margin-bottom: 5px; 
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    background-color: #fff;
+    padding: 0 5px;
+    transition: color 0.3s;
+    font-size: small;
+  
+  }
+  
+  .h_page-container input[type='number'],
+  select {
+    
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-top: 20px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+  }
+  
+
+  .h_page-container .form-group input{
+    height: 20px;
+  }
+  .h_page-container .form-group select{
+    width: auto;
+  }
+
+  .h_page-container .form-group.focused input {
+    color: red; /* Change label text color to red when focused */
+    font-weight: bold;
+  }
+
+  .h_page-container .large-paragraph-section{
+    margin:  5px;
+  }
+  .h_page-container .form-group.focused input[type='number'],
+  .h_page-container .form-group.focused select {
+    border-color: red; /* Change border color to red when focused */
+   
+  }
+  .h_page-container .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .h_page-container .custom-output-box {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px; /* Add margin between the last input group and output box */
+   
+   
+    padding: 8px;
+    margin-top: 0px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .h_page-container .custom-output-box label {
+    /* Add styles for the label inside the output box */
+    /* For example, you can change the label's font size, color, etc. */
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .h_page-container .custom-output-box div {
+    /* Add styles for the price value inside the output box */
+    /* For example, you can change the font size, color, etc. */
+    padding-top: -5px;
+    font-size: 20px;
+    color: #ff5733;
+  }
+
+
+  .h_page-container .buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 5px;
+  }
+  
+  .h_page-container .calculate-btn,
+  .h_page-container .reset-btn{
+    width: auto;
+  }
+  .h_page-container .calculate-btn,
+  .h_page-container .reset-btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .h_page-container.calculate-btn {
+    background-color: #3e2fa3;
+  }
+  
+  .h_page-container .reset-btn {
+    background-color: #dc3545;
+  }
+  
+  .h_page-container .calculate-btn:hover,
+  .h_page-container  .reset-btn:hover {
+    background-color: #180e69;
+  }
+  
+  i {
+    margin-right: 5px;
+  }
+  .h_page-container .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .h_page-container  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  .h_page-container .modal-content h2 {
+    margin-bottom: 10px;
+  }
+  
+  .h_page-container  .modal-content p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .h_page-container .modal-content button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .h_page-container  .modal-content button:hover {
+    background-color: #0056b3;
+  }
+  
+  .h_page-container .large-paragraph-section {
+    /* Add your custom styles for the large paragraph section here */
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+    .h_page-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+  }
+
+.h_page-container .calculateprice{
+  margin-top: 10px;
+}
+
+  .h_page-container .form-group {
+    margin-top: 10px;
+    margin-bottom: 5px; /* Adjust margin for better spacing on small screens */
+  }
+
+  .h_page-container .db{
+    display: none;
+  }
+  .h_page-container .input_boxes {
+    display: flex;
+    flex-direction: column; /* Change to column layout for small screens */
+  }
+
+  .h_page-container .buttons-container {
+    display: flex;
+    flex-direction: column; /* Change to column layout for small screens */
+  }
+
+  .h_page-container .calculate-btn, .reset-btn {
+    width: auto; /* Make the buttons full-width on small screens */
+    margin-bottom: 10px; /* Adjust margin for better spacing on small screens */
+  }
+
+  .h_page-container .large-paragraph-section {
+    padding: 5px; /* Adjust padding for smaller screens */
+  }
+.h_page-container .calculateprice .form-group select{
+
+  width: 93%;
+}
+  .input_boxes .form-group input[type='number']{
+    width: 95%;
+  }
+
+  /* Optionally, you can adjust the font sizes for better readability on smaller screens */
+  .h_page-container  h2 {
+    font-size: 24px;
+  }
+
+  .h_page-container .form-group label {
+    font-size: 14px;
+  }
+
+  .h_page-container input[type="number"] {
+    font-size: 14px;
+    padding: 5px;
+
+  }
+
+  .h_page-container .custom-output-box label {
+    font-size: 14px;
+  }
+
+  .h_page-container .custom-output-box div {
+    font-size: 18px;
+  }
+
+  .h_page-container .large-paragraph-section p {
+    font-size: 14px;
+  }
+
+  .h_page-container .large-paragraph-section{
+    margin-left: 5px;
+  }
+}

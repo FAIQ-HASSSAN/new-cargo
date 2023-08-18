@@ -1,0 +1,191 @@
+.invoice_address {
+    display: flex;
+  }
+  
+  .left-container {
+    flex: 1;
+    background-color: #f8fafc;
+    margin-bottom: 20px;
+    padding: 5px;
+  }
+
+  .input-error-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group .error-text {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .form-group .error {
+    border-color: red;
+  }
+  
+  .left-container li:hover {
+    background-color: rgb(84, 168, 196);
+  }
+  .main-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .main-menu li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .sub-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sub-menu li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .iaright-container {
+    flex: 3;
+  }
+  
+  .iaright-container .section {
+    margin: 10px;
+    margin-bottom: 10px;
+  }
+ 
+  
+  .iaright-container .section h4{
+    color: #3e2fa3;
+  }
+  .iaright-container .section p{
+    color:#3e2fa3;
+    text-align: justify;
+  text-justify: inter-word;
+  }
+
+
+  .iaright-container .section h2 {
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+
+  /* Style the center-heading and section */
+.iaright-container .section {
+  margin-bottom: 5px;
+}
+
+.iaright-container .section h3 {
+  margin-bottom: 10px;
+}
+
+/* Style the form groups in row format */
+.iaright-container .section .form-group-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.iaright-container .form-group input{
+height: 10px;
+width: 300px;
+
+}
+
+.iaright-container .form-group input[type="file"] {
+  /* Remove default styles to hide the default file input appearance */
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.iaright-container select {
+  padding: 5px;
+  border: 1px solid #ddd;
+  width: 322px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.iaright-container .form-group button{
+  background-color: #3e2fa3;
+  color: white;
+  height: 40px;
+  width: 10%;
+  margin-left: 10px;
+  border: 1px solid blue;
+  border-radius: 4px ;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+  .invoice_address {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .left-container{
+    display: flex;
+  }
+  
+  .main-menu {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .iaright-container{
+    margin-top: -30px;
+  }
+  .main-menu li {
+    margin-bottom: 10px;
+  }
+
+  /* Styles for the dropdown menu */
+  .dropdown {
+    position: relative;
+  }
+
+  .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none;
+  }
+
+  .dropdown:hover .sub-menu {
+    display: block;
+  }
+
+  
+
+  .sub-menu li {
+    margin-bottom: 5px;
+  }
+  .iaright-container .section .form-group-row{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .iaright-container .form-group button{
+    width: auto;
+    margin-right: 10px;
+  }
+.iaright-container .section .form-group input{
+  width: auto;
+}
+  .iaright-container .form-group select{
+    width: 99%;
+  }
+}
+

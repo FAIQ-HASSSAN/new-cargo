@@ -1,0 +1,130 @@
+.announcement{
+    display: flex;
+}
+
+.le_container{
+    flex: 1;
+    background-color: #f8fafc;
+}
+
+
+
+
+
+.ri-container{
+    flex: 3;
+}
+/* Existing CSS... */
+
+/* New color scheme for the announcement section */
+.ri-container .section h2 {
+    margin-bottom: 20px;
+    margin-left: 10px;
+    color: black;
+  }
+  
+  .ri-container .announcement-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .ri-container .announcement-item {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ri-container .announcement-item h4 {
+    margin-bottom: 10px;
+    color: black;
+    font-size: 20px;
+  }
+  
+  .ri-container .announcement-item p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+  text-justify: inter-word;
+  }
+  
+  /* Button for read more with new color */
+  .ri-container .read-more-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+  }
+  
+  .ri-container .read-more-btn:hover {
+    background-color: black;
+  }
+  
+
+  .announcement-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .announcement-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+  .announcement-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show before truncating */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .announcement-description.show {
+    -webkit-line-clamp: unset; /* Show full text when "Read More" is clicked */
+  }
+  
+  .read-more-button {
+    border: none;
+    background-color: transparent;
+    color: #007bff;
+    cursor: pointer;
+  }
+
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .announcement{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+  
+    .ri-container {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+  
+    .ri-container .section h2 {
+      text-align: center;
+    }
+  
+    .ri-container .announcement-list {
+      align-items: center;
+    }
+  
+    .ri-container .announcement-item {
+      width: 80%; /* Adjust the width as needed */
+    }
+  }
+  
+  

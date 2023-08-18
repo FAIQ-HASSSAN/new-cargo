@@ -1,0 +1,159 @@
+.support{
+display: flex;
+}
+.sl_container{
+    flex: 1;
+}
+
+.sr_container{
+    flex: 3;
+    padding-left: 15px;
+}
+
+/* Existing CSS... */
+
+/* Style the Sr-Container */
+.sr_container .section h3 {
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  .sr_container .ticket-creation-section {
+    margin-bottom: 30px;
+  }
+  
+  .sr_container .ticket-creation-section button {
+    background-color: #3e2fa3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .sr_container .ticket-creation-section button:hover {
+    background-color: #16679a;
+  }
+  
+  .sr_container .ticket-popup {
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 70px;
+  }
+  
+  .sr_container .ticket-popup h4 {
+    margin-bottom: 10px;
+    color: #1e83c9;
+    font-size: 20px;
+  }
+  
+  .sr_container .ticket-popup .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .sr_container .ticket-popup label {
+    display: block;
+    margin-bottom: 5px;
+    color: #444;
+  }
+
+  .sr_container .ticket-popup select{
+    width: auto;
+    height: 50%;
+  }
+  
+  .sr_container .ticket-popup input,
+  .sr_container .ticket-popup textarea {
+    width: auto;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .sr_container .ticket-popup textarea {
+    width: 612px;
+    height: 90px;
+  }
+  
+  .sr_container .ticket-popup button {
+    background-color: #3e2fa3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin: 10px;
+  }
+  
+  .sr_container .ticket-popup button:hover {
+    background-color: #3e2fa3;
+  }
+  
+  .sr_container .ticket-list-section table {
+    width: 100%;
+    border-collapse: collapse;
+    cursor: pointer;
+  }
+  
+  .sr_container .ticket-list-section table th,
+  .sr_container .ticket-list-section table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .sr_container .ticket-list-section table th {
+    background-color: #f2f2f2;
+  }
+  
+  .sr_container .ticket-list-section table tbody tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+
+
+
+    .support{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .sr_container {
+      flex-direction: column;
+      align-items: center;
+      margin-right: 10px;
+    }
+  
+    .sr_container .ticket-popup textarea {
+      width: 95%;
+      height: 90px;
+    }
+
+
+    .sr_container .ticket-popup {
+      width: 80%;
+      max-width: 400px;
+    }
+
+    .support .form-group .textarea{
+      background-color: #444;
+      width: 100%;
+    }
+  
+
+  .modal-overlay .modal-content p {
+    text-decoration: none;
+    font-size: 15px;
+  }
+}
+

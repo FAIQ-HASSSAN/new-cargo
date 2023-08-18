@@ -1,0 +1,153 @@
+.about_image1{
+  padding-left: 10px;
+  margin-top: 1rem;
+  margin-left: 10px;
+}
+
+
+  .heading h2 {
+    font-size: 40px;
+    color: rgb(27, 27, 27);
+    font-weight: 300;
+  }
+  .heading h3 {
+    font-size: 20px;
+    color: rgb(99, 99, 99);
+    font-weight: 500;
+  }
+  
+  .about_section_2 {
+    display: flex;
+  }
+  .about_main .about_section_2 p {
+    font-size: 20px;
+    color: rgb(99, 99, 99);
+    font-weight: 400;
+    margin-top: 0.5rem;
+    margin-left: 3rem;
+      
+  }
+
+
+ 
+
+  .whole_section{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cns_pic img{
+    position: absolute;
+    margin-top: 15px;
+    right: 10px;
+    width: 340px;
+    height: 650px;
+    border-radius: 7px ;
+
+  }
+  .about_main .left_side {
+    width: 70%;
+    text-align: justify;
+  text-justify: inter-word;
+  }
+  
+  .whycome h3 {
+      color: #476659;
+      text-align: center;
+      font-size: 30px;
+      margin-top: 3rem;
+  }
+
+  .details{
+      display: flex;
+      margin-left: 5rem;
+      margin-right: 5rem;
+      /* width: 90%; */
+  }
+  .upper_row{
+  
+      margin-left: 2rem;
+  }
+  .upper_row h1{
+      color: #476659;
+      font-size: 20px;
+      margin-top: 3rem;
+      font-weight:600;
+  }
+  .efooter{
+    margin-top: 30px;
+    border-top: 1px solid rgb(11, 9, 9);
+  }
+
+
+  @media (max-width: 767px) {
+    .about_main{
+      width: 100%;
+     
+    }
+
+    .about_main .about_section_2{
+      width: 125%;
+    }
+    .whole_section{
+      display: flex;
+      flex-direction: column;
+    }
+.cns_pic img {
+  display: none;
+}
+
+.about_main .left_side p{
+  width: 100%;
+  margin-left: 1rem;
+ 
+}
+
+
+.about_main .about_section_2 .left_side .heading h2{
+  width: 100%;
+
+}
+
+.efooter{
+  margin-top: -10px;
+  border-top: 1px solid rgb(230, 222, 222);
+}
+.edelivery_foot{
+margin-top: 20px;
+  border-top: 1px solid black;
+  width: 100%;
+
+}
+
+  }
+
+
+  @media screen and (min-width:767px) and (max-width:1464px)
+  {
+    .cns_pic img {
+
+      width: initial;
+      margin: initial;
+      position: absolute;
+      margin-top: 15px;
+      right: 10px;
+      width: 28%;
+      height: 650px;
+      border-radius: 7px;
+  }
+  }
+
+  @media screen and (min-width:1465px) and (max-width:1919px)
+  {
+    .cns_pic img {
+      width: initial;
+      margin: initial;
+      position: absolute;
+      margin-top: -1%;
+      right: 10px;
+      width: 28%;
+      height: 650px;
+      border-radius: 7px;
+  }
+  }
